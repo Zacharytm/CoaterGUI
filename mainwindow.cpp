@@ -2,23 +2,8 @@
 #include <QApplication>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QDebug>
+#include "main.cpp"
 
-#include <iostream>
-#include <QSerialPort>
-#include <QtSerialPort/QSerialPort>
-
-QSerialPort serial;
-
-int Serial()
-{
-serial.setPortName("ArduinoControl");
-serial.open(QIODevice::ReadWrite);
-serial.setBaudRate(QSerialPort::Baud19200);
-serial.setDataBits(QSerialPort::Data8);
-serial.setParity(QSerialPort::NoParity);
-serial.setStopBits(QSerialPort::OneStop);
-serial.setFlowControl(QSerialPort::NoFlowControl);
-}
 
 mainwindow::MainWindow(QWidget *parent):QMainWindow(parent)
 
